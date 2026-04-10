@@ -1,40 +1,91 @@
-# ShelfMate Showcase
+# ShelfMate
 
-Food waste is a global issue, with private households generating over half of the wasted food. This is often caused by a lack of overview and poor planning. **ShelfMate** offers an innovative and cost-effective solution: a modular system that can be integrated into any existing storage to manage food efficiently.
+ShelfMate is a smart food tracking system designed to reduce household food waste by creating a clear, real-time overview of stored groceries.
 
-The system combines a **scanner** (camera and touchscreen) with a **web application**, where all groceries are listed. By utilizing the **OpenFoodFacts API** and our own database, products are identified and stored. Users are notified before products expire, helping them to use their food more effectively.
+It combines a physical scanning device with a web application to automatically track food items and their expiration dates.
 
-In the future, features like **AI-based product recognition** and **household management** could be added, making the system even more adaptable and secure. ShelfMate takes an important step toward sustainable food usage.
+---
 
-## Poster
+## Problem
 
-![Poster](./assets/poster.png)
+Food waste in households is often caused by a lack of visibility:
+
+- People forget what they have
+- Expiration dates are overlooked
+- Inventory is not centrally managed
+
+---
+
+## Solution
+
+ShelfMate creates a structured inventory directly from real-world interaction.
+
+- Scan groceries using a dedicated device
+- Automatically identify products via APIs
+- Store and track items in a central system
+- Monitor expiration dates in real time
+
+---
+
+## How It Works
+
+1. Place an item in front of the scanner  
+2. Product data is detected and enriched via external APIs  
+3. Item is stored in the system  
+4. Inventory is updated instantly  
+5. Users can access all items via the web app  
+
+---
+
+## System Overview
+
+ShelfMate follows a modular architecture:
+
+- **Scanner Interface** → captures and processes product data  
+- **Backend API** → handles business logic and persistence  
+- **Scan Server** → manages hardware communication  
+- **Web Application** → displays inventory and user interaction  
+
+---
+
+## Tech Stack (High-Level)
+
+- **Hardware**: Raspberry Pi + Camera  
+- **Frontend**: React (Web App)  
+- **Backend**: Node.js / API Services  
+- **Data Sources**: OpenFoodFacts API + internal database  
+
+---
+
+## Preview
+
+![ShelfMate UI](./ShelfMate.png)
 
 ---
 
 ## Components
 
-This repository consolidates all components of the **ShelfMate** project:
+This repository consolidates all parts of the system:
 
-- **[Scan Interface](https://github.com/shelf-mate/scan-interface):** A user interface for the scanner (camera and touchscreen) to process grocery data.
-- **[Backend](https://github.com/shelf-mate/backend):** Server-side logic and API for data processing and management.
-- **[Scan Server](https://github.com/shelf-mate/scan-server):** Backend component responsible for handling the scanner's operations.
-- **[Webapp](https://github.com/shelf-mate/webapp):** A web application where users can view and manage their groceries.
-- **[API Client TS](https://github.com/shelf-mate/api-client-ts):** A TypeScript client for interacting with the ShelfMate API.
+- **[Scan Interface](https://github.com/shelf-mate/scan-interface)**  
+- **[Backend](https://github.com/shelf-mate/backend)**  
+- **[Scan Server](https://github.com/shelf-mate/scan-server)**  
+- **[Webapp](https://github.com/shelf-mate/webapp)**  
+- **[API Client TS](https://github.com/shelf-mate/api-client-ts)**  
 
 ---
 
-## Features
+## Key Characteristics
 
-1. **Food Inventory Management**:
-   - Keep track of all groceries in a single place.
-   - Automatically update inventory via the scanner or manual entry.
+- Real-world interaction → digital system  
+- Automatic inventory tracking  
+- Modular, scalable architecture  
+- Focus on simplicity and usability  
 
-2. **Expiration Notifications**:
-   - Get notified before food expires to reduce waste.
+---
 
-3. **Seamless Integration**:
-   - Designed to work with existing storage solutions.
+## Notes
 
-4. **Modular Architecture**:
-   - Components are designed to work independently or as part of the complete system.
+This project explores how physical interfaces and software systems can be combined to solve real-world problems like food waste.
+
+Future improvements may include more advanced product recognition and extended multi-user support.
